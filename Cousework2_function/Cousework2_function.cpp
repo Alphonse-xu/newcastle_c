@@ -3,10 +3,69 @@
 
 #include <iostream>
 
+void product(int a,int b)
+{
+	std::cout << a + b << std::endl;
+}
+
+double quotient(double a, int b) 
+{
+	return a / static_cast<double>(b);
+
+}
+
+bool cal(double a, double b, char c)
+{
+	switch (c) {
+	case '+':
+		std::cout << a + b << std::endl;
+		break;
+	case '-':
+		std::cout << a - b << std::endl;
+		break;
+	case '*':
+		std::cout << a * b << std::endl;
+		break;
+	case '/':
+		std::cout << a / b << std::endl;
+		break;
+	default:
+		std::cout << "enter the right operater" << std::endl;
+		return true;
+	}
+	return false;
+}
+
 int main()
 {
-    std::cout << "Hello World!\n";
+	bool CalFlag = true;
+	int a, b;
+	char c;
+	product(1, 2);
+
+	std::cout << quotient(5, 3)<<std::endl;
+
+	while(CalFlag)
+	{
+		std::cout << "enter 2 num and 1 operator" << std::endl;
+		std::cin >> a;
+		std::cin >> b;
+		std::cin >> c;
+
+		CalFlag = cal(a,b,c);
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
 // 调试程序: F5 或调试 >“开始调试”菜单
