@@ -1,5 +1,5 @@
 ﻿#include <iostream>
-
+#include <algorithm>
 using namespace std;
 
 void swap(int x, int y) {
@@ -48,10 +48,18 @@ int main() {
 		}
 	}
 
+	for_each(nums, nums + 10, [](int x) {cout << x; });
+
+	for (int& i:nums)
+	{
+		cout << i;
+	}
+
 	for (size_t i = 0; i < 10; i++)		
 	{
 		cout << nums[i];
 	}
+
 	return 0;
 }
 

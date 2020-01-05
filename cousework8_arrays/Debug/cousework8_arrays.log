@@ -1,0 +1,8 @@
+﻿  cousework8_arrays.cpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\algorithm(84,1): error C2100: 非法的间接寻址
+D:\GitHub\newcastle_c\cousework8_arrays\cousework8_arrays.cpp(33): message : 查看对正在编译的函数 模板 实例化“_Fn std::for_each<char,main::<lambda_fe49bee8789bb000bfb231e2cbcc272b>>(_InIt,_InIt,_Fn)”的引用
+D:\GitHub\newcastle_c\cousework8_arrays\cousework8_arrays.cpp(33): message :         with
+D:\GitHub\newcastle_c\cousework8_arrays\cousework8_arrays.cpp(33): message :         [
+D:\GitHub\newcastle_c\cousework8_arrays\cousework8_arrays.cpp(33): message :             _Fn=main::<lambda_fe49bee8789bb000bfb231e2cbcc272b>,
+D:\GitHub\newcastle_c\cousework8_arrays\cousework8_arrays.cpp(33): message :             _InIt=char
+D:\GitHub\newcastle_c\cousework8_arrays\cousework8_arrays.cpp(33): message :         ]

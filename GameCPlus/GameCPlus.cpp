@@ -1,11 +1,16 @@
-﻿// GameCPlus.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
-//
-
-#include <iostream>
+﻿#include <iostream>
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	int x = 100, y = 200, z = 300;
+	auto ff = [=, &y, &z](int n) {
+		cout << x << endl;
+		y++; z++;
+		return n * n;
+	};
+	cout << ff(15) << endl;
+	cout << y << "," << z << endl;
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单

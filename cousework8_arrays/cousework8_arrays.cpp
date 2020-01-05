@@ -1,20 +1,64 @@
-﻿// cousework8_arrays.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
-//
+﻿#include <iostream>
+#include<algorithm>
+using namespace std;
 
-#include <iostream>
+char myname[] = "owen xu";
+char first[10];
+char last[10];
 
-int main()
+void showname()
 {
-    std::cout << "Hello World!\n";
+	for (auto& i : myname) {
+		cout << i;
+	}
 }
 
-// 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
-// 调试程序: F5 或调试 >“开始调试”菜单
 
-// 入门使用技巧: 
-//   1. 使用解决方案资源管理器窗口添加/管理文件
-//   2. 使用团队资源管理器窗口连接到源代码管理
-//   3. 使用输出窗口查看生成输出和其他消息
-//   4. 使用错误列表窗口查看错误
-//   5. 转到“项目”>“添加新项”以创建新的代码文件，或转到“项目”>“添加现有项”以将现有代码文件添加到项目
-//   6. 将来，若要再次打开此项目，请转到“文件”>“打开”>“项目”并选择 .sln 文件
+float calc_avg(const int* arr, const int val) {
+	int sum = 0;
+
+	for (int i = 0; i < val; ++i)
+		sum += arr[i];
+
+	return (sum / (float)val);
+}
+
+float calc_avg(const int* arr, const int val);
+
+int main(void) {
+
+	showname();
+
+	const int CONST_VALUE = 3;
+	float ave;
+
+	// stack based 1-d arrays
+	int array_nums[CONST_VALUE] = { 2, 4, 5 };
+
+	// print out the first element
+	cout << "value at index 0 is " << array_nums[0] << "\n";
+
+	//stack based 2-d arrays
+	char naughts_n_xs[3][3];
+
+	// set the middle square to x
+	naughts_n_xs[1][1] = 'X';
+
+	//arrays on the heap 1-d
+	int* sum = new int[CONST_VALUE];
+
+	for (int i = 0; i < CONST_VALUE; ++i)
+	{
+		cout << "enter a value...\n";
+		cin >> sum[i];
+	}
+
+	ave = calc_avg(sum, CONST_VALUE);
+
+	cout << "the average is " << ave << "\n";
+
+	delete[] sum;
+
+	return 0;
+}
+
