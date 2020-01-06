@@ -3,6 +3,16 @@
 
 #include <iostream>
 
+template<typename T>class BinTreeNode
+{
+public:
+	T data;
+	BinTreeNode<T>* leftChild, * rightChild;
+	BinTreeNode() :leftChild(nullptr), rightChild(nullptr) {}
+	BinTreeNode(T x) :data(x) { leftChild = nullptr; rightChild = nullptr; }
+
+};
+
 int main()
 {
     std::cout << "Hello World!\n";
