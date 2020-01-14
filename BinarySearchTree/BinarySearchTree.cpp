@@ -13,6 +13,24 @@ public:
 
 };
 
+BinTreeNode<int>* root = nullptr;
+
+template<typename T> void insert_nood(BinTreeNode<T>** treelocation, T value)
+{
+	if (!*treelocation) {
+		*treelocation = new node();
+		(*treelocation)->value = value;
+	}
+	else 
+		if((*treelocation)->data > value){
+			insert_nood(&(*treelocation)->leftChild,value)
+		}
+		else
+		{
+			insert_nood(&(*treelocation)->rightChild,value)
+		}
+}
+
 int main()
 {
     std::cout << "Hello World!\n";
